@@ -3,6 +3,10 @@ const resetButtonSelector = document.querySelector(".reset-button");
 
 function etchASketch() {
     size = prompt("Enter the size of the grid.Max is 100x100.");
+    if(size>100) {
+        alert("Grid cannot be bigger than 100x100");
+        etchASketch();
+    }
     for (let i = 0; i < size * size; i++) {
         const newDiv = document.createElement("div");
         newDiv.classList.add("square");
