@@ -1,6 +1,8 @@
 const gridContainerSelector = document.querySelector(".grid-container");
 const resetButtonSelector = document.querySelector(".reset-button");
 
+
+
 function etchASketch() {
     size = prompt("Enter the size of the grid.Max is 100x100.");
     if(size>100) {
@@ -31,3 +33,4 @@ function resetGrid(parent) {
     parent.replaceChildren()
     etchASketch();
 } 
+
