@@ -21,13 +21,13 @@ function etchASketch() {
 }
 
 etchASketch();
-function resetGrid(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-    etchASketch();
-}
-
 
 
 resetButtonSelector.addEventListener("click", ()=>resetGrid(gridContainerSelector));
+
+
+
+function resetGrid(parent) {
+    parent.replaceChildren()
+    etchASketch();
+} 
